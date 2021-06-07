@@ -1054,7 +1054,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000333488, y: 0}
   m_SpriteTilingProperty:
@@ -1069,27 +1069,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1349344, y: 0.16}
   m_EdgeRadius: 0
---- !u!50 &1302350919
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!251 &1302350919
+PlatformEffector2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302350915}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1366289009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,9 +1397,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e09c427cbedc74ab5794e7027010bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1779737021}
+  moving: {fileID: 1779737021}
   animator: {fileID: 1779737022}
-  runSpeed: 70
+  runSpeed: 200
 --- !u!212 &1779737017
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1478,7 +1476,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1779737015}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: cbdcd637c45d92b41a6ca19e9ce9b0e5, type: 2}
+  m_Material: {fileID: 6200000, guid: 15f70b739a948f541bd159b8533b5901, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1501,7 +1499,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 15f70b739a948f541bd159b8533b5901, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -1518,16 +1516,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397fefb420e0c154e994678ac42edc69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 300
-  m_CrouchSpeed: 0.35
-  m_MovementSmoothing: 0.275
-  m_AirControl: 1
-  m_WhatIsGround:
+  jumpForce: 350
+  movementSmoothing: 0.05
+  whatIsGround:
     serializedVersion: 2
     m_Bits: 567
-  m_GroundCheck: {fileID: 1717978920}
-  m_CeilingCheck: {fileID: 2081389866}
-  m_CrouchDisableCollider: {fileID: 0}
+  groundCheck: {fileID: 1717978920}
+  padding: 2.5
+  extraJumps: 1
 --- !u!95 &1779737022
 Animator:
   serializedVersion: 3

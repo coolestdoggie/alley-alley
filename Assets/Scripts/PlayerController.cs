@@ -4,109 +4,26 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
-//{
-//    [Header("Moving")]
-//    [SerializeField] private int speed = 10;
-//    [SerializeField] private int jumpForce = 10;
-
-//    [SerializeField] float moveSpeed = 10f;
-//    [SerializeField] float padding = .1f;
-
-//    private bool isFacingRight = true;
-
-//    private Rigidbody2D rb2d;
-//    private Animator animator;
-
-//    private bool isGrounded;
-
-//    float xMin;
-//    float xMax;
-//    float yMin;
-//    float yMax;
-
-//    private void Awake()
-//    {
-//        rb2d = GetComponent<Rigidbody2D>();
-//        animator = GetComponent<Animator>();
-//    }
-
-//    private void Start()
-//    {
-//        SetUpMoveBoundaries();
-//    }
-
-//    void Update()
-//    {
-//        Move();
-
-//        float hor = Input.GetAxis("Horizontal") * Time.deltaTime;
-
-//        transform.Translate(hor * speed, 0, 0);
-
-//        rb2d.velocity = new Vector2(hor * speed * Time.deltaTime, rb2d.velocity.y);
-
-//        //if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
-//        //{
-//        //    rb2d.AddForce(new Vector2(0, jumpForce));
-//        //}
-
-
-//        //animator.SetBool("breakBrick", breakBrick);
-//        //animator.SetBool("isGrounded", isGrounded);
-//        //animator.SetFloat("vert", Mathf.Abs(rb2d.velocity.y));
-//        //animator.SetFloat("hor", Mathf.Abs(hor));
-
-//    private void SetUpMoveBoundaries()
-//    {
-//        Camera gameCamera = Camera.main;
-
-//        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
-//        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
-//    }
-
-//    private void Move()
-//    {
-//        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-//        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-
-//        transform.position = new Vector2(newXPos, 0);
-
-//    } 
-//    private void OnCollisionEnter2D(Collision2D collision)
-//    {
-//        isGrounded = true;
-//    }
-
-//    private void OnCollisionExit2D(Collision2D collision)
-//    {
-//        isGrounded = false;
-//    }
-
-
-
-//}
 {
-   
-
     enum Sides
     {
         Left = -1,
         Right = 1
     }
-    
 
-    public Moving moving;
-    public Animator animator;
+    [SerializeField] Moving moving;
+    [SerializeField] Animator animator;
+    [SerializeField] float runSpeed = 40f;
 
-    public float runSpeed = 40f;
-
-    float horizontalMove;
-    bool jump = false;
-    bool crouch = false;
-    
+    private float horizontalMove;
+    private bool jump = false;
     private Sides side = Sides.Right;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        moving.SetUpMoveBoundaries();
+    }
+
     void Update()
     {
 
@@ -120,28 +37,28 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsJumping", jump);
         }
 
-        if (transform.position.x > 1.8f)
-        {
-            side = Sides.Left;
-        }
-        else if (transform.position.x < -1.8f)
-        {
-            side = Sides.Right;
-        }
-
+        CheckForChangeDirection();
     }
 
     void FixedUpdate()
     {
-        //Move our character
-        
-
-        moving.Move(horizontalMove * (int)side * Time.fixedDeltaTime, crouch, jump);
+        moving.Move(horizontalMove * (int)side * Time.fixedDeltaTime, jump);
         
         jump = false;
         animator.SetBool("IsJumping", jump);
     }
 
+    private void CheckForChangeDirection()
+    {
+        if (transform.position.x > moving.Padding)
+        {
+            side = Sides.Left;
+        }
+        else if (transform.position.x < -moving.Padding)
+        {
+            side = Sides.Right;
+        }
+    }
 }
 
 
