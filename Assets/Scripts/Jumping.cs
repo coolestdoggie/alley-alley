@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Jumping : MonoBehaviour
 {
+    [Header("Jumping")]
     [SerializeField] float jumpForce = 400f;
     [SerializeField] float extraJumps;
-
-    [SerializeField] LayerMask whatIsGround;
-    [SerializeField] Transform groundCheck;
-    const float groundedRadius = .2f;
-
     float leftJumps;
     bool jump = false;
 
+    [Header("Grounding")]
+    [SerializeField] LayerMask whatIsGround;
+    [SerializeField] Transform groundCheck;
+    const float groundedRadius = .2f;
     bool isGrounded;
+
     Rigidbody2D rgbd2D;
 
     public float LeftExtraJumps { get => leftJumps; set => leftJumps = value; }
@@ -33,10 +34,7 @@ public class Jumping : MonoBehaviour
             jump = true;
         }
 
-    }
 
-    void FixedUpdate()
-    {
         isGrounded = false;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
@@ -45,14 +43,11 @@ public class Jumping : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
                 isGrounded = true;
         }
-
-
-
     }
+
 
     public void Jump()
     {
-        
         if (isGrounded)
         {
             LeftExtraJumps = extraJumps;

@@ -6,7 +6,7 @@ public interface IMoveStrategy
 {
     float Speed { get; set; } 
 
-    void Move(float move);
+    void Move();
 }
     
 
