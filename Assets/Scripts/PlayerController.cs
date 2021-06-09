@@ -11,13 +11,18 @@ public class PlayerController : MonoBehaviour
         moving?.SetUpMoveBoundaries();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         
         moving?.Move();
+
+    }
+
+    void Update()
+    {
         jumping?.Jump();
 
     }
 
-    
+
 }

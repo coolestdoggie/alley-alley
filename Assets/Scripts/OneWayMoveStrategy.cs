@@ -15,7 +15,7 @@ public class OneWayMoveStrategy : MonoBehaviour, IMoveStrategy
 
     public float Speed { get => speed; set => speed = value; }
 
-    private void Start()
+    private void Awake()
     {
         rgbd2D = GetComponent<Rigidbody2D>();
     }

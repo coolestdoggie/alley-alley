@@ -29,7 +29,7 @@ public class Jumping : MonoBehaviour
     {
         jump = false;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetMouseButtonDown(0))
         {
             jump = true;
         }

@@ -23,12 +23,16 @@ public class SidesMoveStrategy : MonoBehaviour, IMoveStrategy
         rgbd2D = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+    }
+
     public void Move()
     {
         float move = speed * (int)side * Time.deltaTime;
         Vector3 targetVelocity = new Vector2(move, rgbd2D.velocity.y);
         rgbd2D.velocity = Vector3.SmoothDamp(rgbd2D.velocity, targetVelocity, ref velocity, movementSmoothing);
-
+        
         CheckForChangeDirection();
 
         if (move > 0 && !isFacingRight)

@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moving: {fileID: 283852763032789597}
-  speed: 400
+  speed: 200
   movementSmoothing: 0.03
 --- !u!114 &283852763032789597
 MonoBehaviour:
