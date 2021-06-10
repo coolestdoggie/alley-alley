@@ -9,6 +9,8 @@ public class Platforms : MonoBehaviour
 
     private void Start()
     {
-        enemy.transform.position = new Vector2(Random.Range(-3, 3), enemy.transform.position.y);
+        enemy.transform.position = new Vector2(Random.Range(-2, 2), enemy.transform.position.y);
     }
+
+
 }

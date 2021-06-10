@@ -23,7 +23,7 @@ public class PlatformSpawner : MonoBehaviour
 
         for (int i = 0; i < amountPlatformsOnStart; i++)
         {
-            GameObject pooledItem = ObjectPooler.SharedInstance.GetPooledObject(Random.Range(0,5));
+            GameObject pooledItem = ObjectPooler.SharedInstance.GetPooledObject(Random.Range(0, 5));
             pooledItem.SetActive(true);
             pooledItem.transform.position = pos;
 
