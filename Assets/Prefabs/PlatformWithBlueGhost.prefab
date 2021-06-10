@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c867a9bd4210c45bcfa7d90d3d69ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToDelete: 5
 --- !u!114 &-3710873223424080555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183a4d45aecd1c64e9454e2bd591796f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 9177663375998321085, guid: 9b956252a54e04f41a804c2fdd2afcf0, type: 3}
+  enemy: {fileID: 8461703769601646998}
 --- !u!1001 &735105471275245611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,6 +94,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b956252a54e04f41a804c2fdd2afcf0, type: 3}
+--- !u!1 &8461703769601646998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9177663375998321085, guid: 9b956252a54e04f41a804c2fdd2afcf0,
+    type: 3}
+  m_PrefabInstance: {fileID: 735105471275245611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8461703769601646995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9177663375998321080, guid: 9b956252a54e04f41a804c2fdd2afcf0,
