@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2281825812791111306}
   - component: {fileID: 2281825812791111307}
-  - component: {fileID: 2281825812791111304}
+  - component: {fileID: 373047938189254309}
   - component: {fileID: 2281825812791111305}
   - component: {fileID: 3189199116083049488}
   m_Layer: 9
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2281825812791111304
-BoxCollider2D:
+--- !u!68 &373047938189254309
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,19 +98,12 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000333488, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 1.1270373, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1349344, y: 0.16}
+  m_Offset: {x: 0, y: 0.005}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5577131, y: 0.07163868}
+  - {x: -0.5616531, y: 0.07558074}
+  - {x: 0.55952317, y: 0.07387067}
 --- !u!251 &2281825812791111305
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -126,7 +119,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 129.08
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -142,3 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c867a9bd4210c45bcfa7d90d3d69ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceToDelete: 5
