@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547226767599774351}
   - component: {fileID: 4547226767599774352}
+  - component: {fileID: 2556473090844529887}
   m_Layer: 0
   m_Name: PlatformWithBlue
   m_TagString: Untagged
@@ -45,7 +46,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c867a9bd4210c45bcfa7d90d3d69ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 303962464807431431}
+  distanceToDelete: 5
+--- !u!114 &2556473090844529887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4547226767599774353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183a4d45aecd1c64e9454e2bd591796f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4264094002968269489, guid: 1ad1521f591b96a47ab37376d4b26ff2, type: 3}
 --- !u!1001 &4547226767469461430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80,12 +94,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ad1521f591b96a47ab37376d4b26ff2, type: 3}
---- !u!1 &303962464807431431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4264094002968269489, guid: 1ad1521f591b96a47ab37376d4b26ff2,
-    type: 3}
-  m_PrefabInstance: {fileID: 4547226767469461430}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &303962464807431426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4264094002968269492, guid: 1ad1521f591b96a47ab37376d4b26ff2,
@@ -124,7 +132,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pink (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3189199116083049488, guid: 12042cd059b231e4dae43eb4c6200a48, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12042cd059b231e4dae43eb4c6200a48, type: 3}
 --- !u!4 &2355473708895094425 stripped
 Transform:

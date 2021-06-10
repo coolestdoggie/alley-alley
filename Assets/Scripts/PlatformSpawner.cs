@@ -4,30 +4,45 @@ using UnityEngine;
 
 public class PlatformSpawner : MonoBehaviour
 {
-    [SerializeField] private int amountPlatformsOnStart = 6;
-    [SerializeField] private Vector2 offset;
+    [SerializeField] int amountPlatformsOnStart = 6;
+    [SerializeField] Vector2 offset;
+    [SerializeField] Vector2 pos = new Vector2(0, -3.6f);
+
+    public int AmountPlatformsOnStart { get => amountPlatformsOnStart; set => amountPlatformsOnStart = value; }
+    public Vector2 Offset { get => offset; set => offset = value; }
+
+
+    private void OnEnable()
+    {
+        Platforms.PlatformDisappeared += SpawnNextPlatform;
+    }
+
+    private void OnDisable()
+    {
+        Platforms.PlatformDisappeared -= SpawnNextPlatform;
+    }
 
     void Start()
     {
         SpawnStartPlatforms();
     }
 
-    void Update()
+    private void SpawnStartPlatforms()
     {
-        
-    }
-
-    public void SpawnStartPlatforms()
-    {
-        Vector2 pos = new Vector2(0, -3.6f);
-
-        for (int i = 0; i < amountPlatformsOnStart; i++)
+        for (int i = 0; i < AmountPlatformsOnStart; i++)
         {
-            GameObject pooledItem = ObjectPooler.SharedInstance.GetPooledObject(Random.Range(0, 5));
-            pooledItem.SetActive(true);
-            pooledItem.transform.position = pos;
-
-            pos += offset;
+            SpawnNextPlatform();
         }
     }
+
+    private void SpawnNextPlatform()
+    {
+        GameObject pooledItem = ObjectPooler.SharedInstance.GetPooledObject(Random.Range(0, 5));
+        pooledItem.SetActive(true);
+        pooledItem.transform.position = pos;
+
+        pos += Offset;
+    }
+
+    
 }

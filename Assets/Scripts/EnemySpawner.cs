@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject enemy;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        enemy.transform.position = new Vector2(Random.Range(-2, 2), enemy.transform.position.y);
     }
 }

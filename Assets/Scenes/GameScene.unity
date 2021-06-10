@@ -254,7 +254,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.56317014, y: 1}
+    m_SensorSize: {x: 0.5627395, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -324,49 +324,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1357640809
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1357640811}
-  - component: {fileID: 1357640810}
-  m_Layer: 0
-  m_Name: EnemySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1357640810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357640809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183a4d45aecd1c64e9454e2bd591796f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1357640811
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357640809}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5036552, y: -1.6472425, z: -16.10507}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572662654
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amountPlatformsOnStart: 8
   offset: {x: 0, y: 2}
+  pos: {x: 0, y: -3.6}
 --- !u!4 &1572662656
 Transform:
   m_ObjectHideFlags: 0
@@ -448,19 +406,19 @@ MonoBehaviour:
     shouldExpand: 1
   - objectToPool: {fileID: 4547226767599774353, guid: fa4de08f937df714fb1ceed162ef4860,
       type: 3}
-    amountToPool: 5
+    amountToPool: 1
     shouldExpand: 1
   - objectToPool: {fileID: 735105471290802315, guid: eb20e569503e8b944b8d69ff4029fde8,
       type: 3}
-    amountToPool: 5
+    amountToPool: 1
     shouldExpand: 1
   - objectToPool: {fileID: 2787852469020614021, guid: dd5b7aa0ff8380a42b4207fa7ca3a862,
       type: 3}
-    amountToPool: 5
+    amountToPool: 1
     shouldExpand: 1
   - objectToPool: {fileID: 8815397711884364440, guid: 740c9326ea4d6bc4194225c57e5654af,
       type: 3}
-    amountToPool: 5
+    amountToPool: 1
     shouldExpand: 1
   pooledObjects: []
 --- !u!4 &1660969424
@@ -471,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660969422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.834772, y: -16.911947, z: -11.2421875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -665,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 7807018509749078839, guid: 5a54b5afeaf745d4fabc7f7bde6575d7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7807018509749078839, guid: 5a54b5afeaf745d4fabc7f7bde6575d7,
         type: 3}
