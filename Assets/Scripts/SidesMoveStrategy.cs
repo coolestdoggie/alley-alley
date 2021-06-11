@@ -23,10 +23,6 @@ public class SidesMoveStrategy : MonoBehaviour, IMoveStrategy
         rgbd2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
-    {
-    }
-
     public void Move()
     {
         float move = speed * (int)side * Time.deltaTime;

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4264094002968269492}
   - component: {fileID: 4264094002968269491}
   - component: {fileID: 4264094002968269490}
+  - component: {fileID: -3361854373757187948}
   m_Layer: 10
   m_Name: EnemyBlue
   m_TagString: Untagged
@@ -102,3 +103,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &-3361854373757187948
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4264094002968269489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0026999316, y: -0.043221593}
+  m_Size: {x: 0.17960231, y: 0.23355679}
+  m_Direction: 0

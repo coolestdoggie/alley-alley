@@ -22,7 +22,6 @@ public class Moving : MonoBehaviour
     public void Move()
     {
         MoveStrategy.Move();
-
     }
 
     

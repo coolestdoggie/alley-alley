@@ -11,6 +11,11 @@ GameObject:
   - component: {fileID: 9177663375998321080}
   - component: {fileID: 9177663375998321083}
   - component: {fileID: 9177663375998321082}
+  - component: {fileID: -3022153465688433378}
+  - component: {fileID: -6068195392793387507}
+  - component: {fileID: 5544796667557143575}
+  - component: {fileID: 3817791515094038923}
+  - component: {fileID: -4662413472514641381}
   m_Layer: 10
   m_Name: EnemyBlueGhost
   m_TagString: Untagged
@@ -102,3 +107,80 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3022153465688433378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177663375998321085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9436972c27ed1c545be5c34dc9a328d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moving: {fileID: -6068195392793387507}
+--- !u!114 &-6068195392793387507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177663375998321085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397fefb420e0c154e994678ac42edc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  padding: 2.5
+--- !u!114 &5544796667557143575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177663375998321085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9d51b87b8268e4b89e1e52e94bfa8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSmoothing: 0.05
+  speed: 40
+--- !u!50 &3817791515094038923
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177663375998321085}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &-4662413472514641381
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177663375998321085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000019868216, y: -0.038087964}
+  m_Size: {x: 0.18326494, y: 0.2438241}
+  m_Direction: 0

@@ -4,5 +4,18 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [SerializeField] Moving moving;
+
+    private void Start()
+    {
+        moving?.SetUpMoveBoundaries();
+    }
+
+    void FixedUpdate()
+    {
+
+        moving?.Move();
+
+    }
 
 }
