@@ -148,6 +148,9 @@ MonoBehaviour:
   moving: {fileID: -6068195392793387507}
   speed: 300
   movementSmoothing: 0.03
+  timeDelay: 3
+  warningObject: {fileID: 4593641636032412898, guid: c2e58624a09e60649a13edb927de2697,
+    type: 3}
 --- !u!50 &3817791515094038923
 Rigidbody2D:
   serializedVersion: 4

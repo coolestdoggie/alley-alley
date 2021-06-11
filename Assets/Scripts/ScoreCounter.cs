@@ -23,6 +23,7 @@ public class ScoreCounter: MonoBehaviour
     private void Start()
     {
         beginY = (int)transform.position.y;
+        score = beginY;
     }
 
     private void Update()
