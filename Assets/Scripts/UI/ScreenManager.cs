@@ -9,15 +9,4 @@ public class ScreenManager : MonoBehaviour
 
     public GameObject StartScreen { get => startScreen; set => startScreen = value; }
     public GameObject GameOverScreen { get => gameOverScreen; set => gameOverScreen = value; }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

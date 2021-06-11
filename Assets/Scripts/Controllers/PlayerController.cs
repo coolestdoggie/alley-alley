@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rgb2d;
     Animator animator;
 
-    private bool frozen = false;
+    bool frozen = false;
     public static event Action GameOver;
 
     private void Awake()
@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        
         if (frozen == false)
         {
             moving?.Move();
@@ -35,13 +34,11 @@ public class PlayerController : MonoBehaviour
         {
             rgb2d.velocity = Vector2.zero;
         }
-
     }
 
     void Update()
     {
         jumping?.Jump();
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class OneWayMoveStrategy : MonoBehaviour, IMoveStrategy
 {
-
     [SerializeField] Moving moving;
     [SerializeField] float speed = 40f;
     [Range(0, .3f)]

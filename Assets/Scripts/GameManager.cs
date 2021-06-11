@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] ScreenManager screenManager;
     [SerializeField] private float delayToSetGameOverScreen = 3f;
+
     int score = 0;
 
     private void OnEnable()

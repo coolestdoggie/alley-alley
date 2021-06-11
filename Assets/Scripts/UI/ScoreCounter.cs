@@ -18,7 +18,6 @@ public class ScoreCounter: MonoBehaviour
         } 
     }
     private int beginY;
-    
 
     private void Start()
     {
@@ -29,8 +28,5 @@ public class ScoreCounter: MonoBehaviour
     private void Update()
     {
         Score = (int)transform.position.y - beginY;
-
     }
-
-
 }

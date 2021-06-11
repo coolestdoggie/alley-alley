@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class ObjectPoolItem
 {
-
     public GameObject objectToPool;
     public int amountToPool;
     public bool shouldExpand = true;
@@ -22,7 +21,6 @@ public class ObjectPooler : MonoBehaviour
 {
     public static ObjectPooler SharedInstance;
     public List<ObjectPoolItem> itemsToPool;
-
 
     public List<List<GameObject>> pooledObjectsList;
     public List<GameObject> pooledObjects;

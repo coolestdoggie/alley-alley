@@ -10,7 +10,6 @@ public class Platforms : MonoBehaviour
 
     public static event Action PlatformDisappeared;
 
-
     private void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -23,15 +22,12 @@ public class Platforms : MonoBehaviour
 
     private void RepositionPlatforms()
     {
-
         if (player.transform.position.y > (transform.position.y + distanceToDelete))
         {
             gameObject.SetActive(false);
             OnPlatfromDisappeared();
         }
-        
     }
-
 
     private void OnPlatfromDisappeared()
     {

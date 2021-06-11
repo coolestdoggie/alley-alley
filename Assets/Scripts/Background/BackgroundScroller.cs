@@ -5,6 +5,7 @@ using UnityEngine;
 public class BackgroundScroller : MonoBehaviour
 {
     [SerializeField] PlayerController player;
+
     float yVelocity = 0.0f;
     float smoothTime = 0.3f;
 
@@ -13,7 +14,7 @@ public class BackgroundScroller : MonoBehaviour
         transform.position = new Vector2(0f, player.transform.position.y);
     }
 
-    void Update()
+    private void Update()
     {
         if (transform.position.y > player.transform.position.y)
         {

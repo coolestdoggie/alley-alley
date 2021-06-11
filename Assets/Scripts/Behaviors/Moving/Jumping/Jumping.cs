@@ -29,9 +29,6 @@ public class Jumping : MonoBehaviour
 
     private void Update()
     {
-        
-
-
         isGrounded = false;
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
@@ -70,8 +67,5 @@ public class Jumping : MonoBehaviour
             rgbd2D.AddForce(new Vector2(0f, jumpForce));
             LeftExtraJumps--;
         }
-
-        
     }
-    
 }

@@ -512,6 +512,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 283852763032789593, guid: 612b2eea0dc39064b82c8a3e4023a87c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 283852763032789593, guid: 612b2eea0dc39064b82c8a3e4023a87c,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 283852763032789593, guid: 612b2eea0dc39064b82c8a3e4023a87c,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 283852763032789594, guid: 612b2eea0dc39064b82c8a3e4023a87c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -567,7 +582,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3476482825278801027, guid: 612b2eea0dc39064b82c8a3e4023a87c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 612b2eea0dc39064b82c8a3e4023a87c, type: 3}
 --- !u!1001 &555327104624610269
 PrefabInstance:

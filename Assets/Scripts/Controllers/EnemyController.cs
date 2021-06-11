@@ -13,9 +13,6 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-
         moving?.Move();
-
     }
-
 }

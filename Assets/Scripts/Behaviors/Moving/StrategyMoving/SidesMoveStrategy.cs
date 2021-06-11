@@ -15,7 +15,6 @@ public class SidesMoveStrategy : MonoBehaviour, IMoveStrategy
     Vector3 velocity = Vector3.zero;
     bool isFacingRight = true;
 
-
     public float Speed { get => speed; set => speed = value; }
 
     private void Awake()

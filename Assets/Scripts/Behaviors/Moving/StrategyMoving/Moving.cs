@@ -24,8 +24,6 @@ public class Moving : MonoBehaviour
         MoveStrategy.Move();
     }
 
-    
-
     public void SetUpMoveBoundaries()
     {
         Camera gameCamera = Camera.main;

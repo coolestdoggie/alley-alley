@@ -11,7 +11,6 @@ public class PlatformSpawner : MonoBehaviour
     public int AmountPlatformsOnStart { get => amountPlatformsOnStart; set => amountPlatformsOnStart = value; }
     public Vector2 Offset { get => offset; set => offset = value; }
 
-
     private void OnEnable()
     {
         Platforms.PlatformDisappeared += SpawnNextPlatform;
@@ -56,6 +55,4 @@ public class PlatformSpawner : MonoBehaviour
 
         pos += Offset;
     }
-
-    
 }
