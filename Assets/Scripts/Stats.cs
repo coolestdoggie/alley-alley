@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int hp = 1;
+
+    public int HP
     {
-        
+        get { return hp; }
+        set
+        {
+            hp = value;
+            if (hp <= 0)
+            {
+                Die();
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+        public void Die()
     {
-        
+        Destroy(gameObject);
     }
 }
+

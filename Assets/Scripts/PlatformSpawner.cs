@@ -24,6 +24,10 @@ public class PlatformSpawner : MonoBehaviour
 
     void Start()
     {
+        for (int i = 0; i < 3; i++)
+        {
+            SpawnUsualPlatform();
+        }
         SpawnStartPlatforms();
     }
 
@@ -38,6 +42,15 @@ public class PlatformSpawner : MonoBehaviour
     private void SpawnNextPlatform()
     {
         GameObject pooledItem = ObjectPooler.SharedInstance.GetPooledObject(Random.Range(0, 5));
+        pooledItem.SetActive(true);
+        pooledItem.transform.position = pos;
+
+        pos += Offset;
+    }
+
+    private void SpawnUsualPlatform()
+    {
+        GameObject pooledItem = ObjectPooler.SharedInstance.GetPooledObject(0);
         pooledItem.SetActive(true);
         pooledItem.transform.position = pos;
 

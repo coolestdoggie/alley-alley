@@ -4,7 +4,18 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] Moving moving;
     [SerializeField] Jumping jumping;
+    [SerializeField] LayerMask enemyLayer;
 
+    Rigidbody2D rgb2d;
+    Animator animator;
+
+    private bool frozen = false;
+
+    private void Awake()
+    {
+        rgb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -14,7 +25,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         
-        moving?.Move();
+        if (frozen == false)
+        {
+            moving?.Move();
+        }
+        else
+        {
+            rgb2d.velocity = Vector2.zero;
+        }
 
     }
 
@@ -24,5 +42,13 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        print(enemyLayer);
+        if (1 << collision.gameObject.layer == enemyLayer.value)
+        {
+            animator.SetTrigger("Die");
+            frozen = true;
+        }
+    }
 }
