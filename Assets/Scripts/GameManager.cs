@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] ScreenManager screenManager;
+    [SerializeField] private float delayToSetGameOverScreen = 3f;
     int score = 0;
 
     private void OnEnable()
@@ -40,11 +42,21 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+
+        StartCoroutine(SetActiveGameOverScreen());
+    }
+
+    private IEnumerator SetActiveGameOverScreen()
+    {
+        yield return new WaitForSeconds(delayToSetGameOverScreen);
         screenManager.GameOverScreen.SetActive(true);
+
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    
 }

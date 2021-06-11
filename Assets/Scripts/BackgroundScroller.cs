@@ -11,7 +11,6 @@ public class BackgroundScroller : MonoBehaviour
     private void Start()
     {
         transform.position = new Vector2(0f, player.transform.position.y);
-
     }
 
     void Update()

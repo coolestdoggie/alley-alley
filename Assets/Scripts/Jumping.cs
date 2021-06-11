@@ -17,22 +17,19 @@ public class Jumping : MonoBehaviour
     bool isGrounded;
 
     Rigidbody2D rgbd2D;
+    Animator animator;
 
     public float LeftExtraJumps { get => leftJumps; set => leftJumps = value; }
 
     void Awake()
     {
         rgbd2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        jump = false;
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            jump = true;
-        }
+        
 
 
         isGrounded = false;
@@ -43,6 +40,15 @@ public class Jumping : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
                 isGrounded = true;
         }
+
+        jump = false;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            jump = true;
+        }
+
+        animator.SetFloat("velocityY", Mathf.Abs(rgbd2D.velocity.y));
     }
 
 
@@ -64,6 +70,8 @@ public class Jumping : MonoBehaviour
             rgbd2D.AddForce(new Vector2(0f, jumpForce));
             LeftExtraJumps--;
         }
+
+        
     }
     
 }
