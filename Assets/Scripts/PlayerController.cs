@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
 
     private bool frozen = false;
+    public static event Action GameOver;
 
     private void Awake()
     {
@@ -44,11 +46,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(enemyLayer);
         if (1 << collision.gameObject.layer == enemyLayer.value)
         {
             animator.SetTrigger("Die");
             frozen = true;
+            OnGameOver();
         }
+    }
+
+    private void OnGameOver()
+    {
+        GameOver?.Invoke();
     }
 }
